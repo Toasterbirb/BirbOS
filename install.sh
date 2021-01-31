@@ -5,6 +5,8 @@ echo "| |_) | | |  | |_) | |_| |___) |"
 echo "|____/|_|_|  |_.__/ \___/|____/ "
 echo ""
 
+scriptPath=$(pwd)
+
 echo "> Select your distro:"
 echo "[1] Arch Linux"
 
@@ -38,7 +40,7 @@ then
 	$rootcmd pacman -S --noconfirm --needed xorg-xrdb xorg-xset xorg-xauth xorg-xinit xorg-xkill xorg-xprop xorg-server xorg-xinput xorg-xrandr xorg-xkbcomp xorg-xmodmap xorg-xdpyinfo xorg-xmessage xorg-xsetroot xorg-setxkbmap xorg-fonts-type1 xorg-server-common xorg-fonts-encodings
 
 	echo "> Installing cool programs"
-	$rootcmd pacman -S --noconfirm --needed termite dunst sxhkd weechat rofi xorg mpv neovim zsh xdg-utils stow arandr htop neofetch cmus
+	$rootcmd pacman -S --noconfirm --needed termite dunst sxhkd weechat rofi xorg mpv neovim zsh xdg-utils stow arandr htop neofetch cmus nitrogen
 fi
 
 
@@ -74,3 +76,7 @@ stow -t ~ *
 
 # Cleaning up .xinitrc so it doesn't contain my personal launch commands
 echo "exec dwm" > ~/.xinitrc
+echo "sh $sucklessPath/dwm/dwmbar/dwmbar.sh" >> ~/.xinitrc
+
+# Set wallpaper
+nitrogen --set-zoom-fill $scriptPath/wallpaper.jpg
