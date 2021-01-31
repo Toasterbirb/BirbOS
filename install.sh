@@ -32,7 +32,7 @@ then
 	$rootcmd pacman -Syu --noconfirm
 
 	echo "> Installing development packages"
-	$rootcmd pacman -S --noconfirm --needed base-devel git
+	$rootcmd pacman -S --noconfirm --needed base-devel git gcr webkit2gtk
 
 	echo "> Installing xorg packages"
 	$rootcmd pacman -S --noconfirm --needed xorg-xrdb xorg-xset xorg-xauth xorg-xinit xorg-xkill xorg-xprop xorg-server xorg-xinput xorg-xrandr xorg-xkbcomp xorg-xmodmap xorg-xdpyinfo xorg-xmessage xorg-xsetroot xorg-setxkbmap xorg-fonts-type1 xorg-server-common xorg-fonts-encodings
