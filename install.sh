@@ -78,6 +78,3 @@ stow -t ~ *
 echo "sh $sucklessPath/dwm/dwmbar/dwmbar.sh &" > ~/.xinitrc
 echo "feh --bg-fill $scriptPath/wallpaper.jpg" >> ~/.xinitrc
 echo "exec dwm" >> ~/.xinitrc
-
-# Set wallpaper
-feh --bg-fill $scriptPath/wallpaper.jpg
