@@ -34,7 +34,7 @@ then
 	$rootcmd pacman -Syu --noconfirm
 
 	echo "> Installing development packages"
-	$rootcmd pacman -S --noconfirm --needed base-devel git gcr webkit2gtk
+	$rootcmd pacman -S --noconfirm --needed base-devel git gcr webkit2gtk nodejs
 
 	echo "> Installing xorg packages"
 	$rootcmd pacman -S --noconfirm --needed xorg-xrdb xorg-xset xorg-xauth xorg-xinit xorg-xkill xorg-xprop xorg-server xorg-xinput xorg-xrandr xorg-xkbcomp xorg-xmodmap xorg-xdpyinfo xorg-xmessage xorg-xsetroot xorg-setxkbmap xorg-fonts-type1 xorg-server-common xorg-fonts-encodings
@@ -89,3 +89,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 nvim -c ":PlugInstall" -c ":q" -c ":q"
+echo "Installation finished! Reboot and run startx to launch into dwm"
