@@ -44,7 +44,7 @@ fi
 
 echo "> Installing suckless things"
 sucklessPath=~/Programs/suckless
-mkdir $sucklessPath
+mkdir -p $sucklessPath
 
 # Download sources
 git clone https://github.com/Toasterbirb/dwm $sucklessPath/dwm
