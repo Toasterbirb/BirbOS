@@ -81,4 +81,5 @@ stow -t ~ *
 # Cleaning up .xinitrc so it doesn't contain my personal launch commands
 echo "sh $sucklessPath/dwm/dwmbar/dwmbar.sh &" > ~/.xinitrc
 echo "feh --bg-fill $scriptPath/wallpaper.jpg" >> ~/.xinitrc
+echo "sxhkd" >> ~/.xinitrc
 echo "exec dwm" >> ~/.xinitrc
