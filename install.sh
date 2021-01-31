@@ -58,7 +58,7 @@ then
 	$rootcmd pacman -S --noconfirm --needed xorg-xrdb xorg-xset xorg-xauth xorg-xinit xorg-xkill xorg-xprop xorg-server xorg-xinput xorg-xrandr xorg-xkbcomp xorg-xmodmap xorg-xdpyinfo xorg-xmessage xorg-xsetroot xorg-setxkbmap xorg-fonts-type1 xorg-server-common xorg-fonts-encodings
 
 	echo "> Installing cool programs"
-	$rootcmd pacman -S --noconfirm --needed termite dunst sxhkd weechat rofi xorg mpv neovim zsh xdg-utils stow
+	$rootcmd pacman -S --noconfirm --needed termite dunst sxhkd weechat rofi xorg mpv neovim zsh xdg-utils stow arandr
 fi
 
 
@@ -83,7 +83,7 @@ echo "> Installing muh dotfiles"
 cd ~
 git clone https://github.com/Toasterbirb/dotfiles
 cd ~/dotfiles
-stow -t ~
+stow -t ~ *
 
 # Cleaning up .xinitrc so it doesn't contain my personal launch commands
 echo "exec dwm" > ~/.xinitrc
