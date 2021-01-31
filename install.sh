@@ -53,6 +53,7 @@ git clone https://github.com/Toasterbirb/dwm $sucklessPath/dwm
 git clone https://github.com/Toasterbirb/surf $sucklessPath/surf
 git clone https://github.com/Toasterbirb/dmenu $sucklessPath/dmenu
 git clone https://github.com/Toasterbirb/slock $sucklessPath/slock
+git clone https://github.com/Toasterbirb/slock $sucklessPath/tabbed
 
 # Install them
 cd ~/Programs/suckless/dwm
@@ -65,6 +66,9 @@ cd ~/Programs/suckless/dmenu
 doas make install
 
 cd ~/Programs/suckless/slock
+doas make install
+
+cd ~/Programs/suckless/tabbed
 doas make install
 
 # Clone dotfiles
