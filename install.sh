@@ -5,8 +5,22 @@ echo "| |_) | | |  | |_) | |_| |___) |"
 echo "|____/|_|_|  |_.__/ \___/|____/ "
 echo ""
 
-echo -n "> Detecting distribution... "
-distro=$(lsb_release -ds | sed 's/"//g')
+echo "> Select your distro:"
+echo "[1] Arch Linux"
+
+read selection
+
+case $selection in
+	1)
+		distro="Arch Linux"
+		;;
+
+	*)
+		echo "Invalid selection"
+		exit 0;
+esac
+
+
 echo $distro
 
 echo -n "> Do you want to use [s]udo or [d]oas to run root commands? (S/d): "
