@@ -23,27 +23,7 @@ esac
 
 echo $distro
 
-echo -n "> Do you want to use [s]udo or [d]oas to run root commands? (S/d): "
-read rootcmd
-if [ -z $rootcmd ]
-then
-	echo "> Defaulting to sudo"
-	rootcmd=sudo
-else
-	if [[ "$rootcmd" == "s" ]]
-	then
-		echo "> Using sudo"
-		rootcmd=sudo
-	elif [[ "$rootcmd" == "d" ]]
-	then
-		echo "> Using doas"
-		rootcmd=doas
-	else
-		echo "> Invalid option. Quitting..."
-		exit 0
-	fi
-fi
-
+rootcmd=doas
 
 # Install packages
 if [[ "$distro" == "Arch Linux" ]]
