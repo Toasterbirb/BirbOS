@@ -54,16 +54,16 @@ git clone https://github.com/Toasterbirb/slock $sucklessPath/slock
 
 # Install them
 cd ~/Programs/suckless/dwm
-sh ~/Programs/suckless/dwm/install.sh
+doas make install
 
 cd ~/Programs/suckless/surf
-sh ~/Programs/suckless/surf/install.sh
+doas make install
 
 cd ~/Programs/suckless/dmenu
-sh ~/Programs/suckless/dmenu/install.sh
+doas make install
 
 cd ~/Programs/suckless/slock
-sh ~/Programs/suckless/slock/install.sh
+doas make install
 
 # Clone dotfiles
 echo "> Installing muh dotfiles"
