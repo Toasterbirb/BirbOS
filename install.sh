@@ -63,14 +63,14 @@ fi
 
 
 echo "> Installing suckless things"
-mkdir ~/Programs/suckless
-cd ~/Programs/suckless
+sucklessPath=~/Programs/suckless
+mkdir $sucklessPath
 
 # Download sources
-git clone https://github.com/Toasterbirb/dwm
-git clone https://github.com/Toasterbirb/surf
-git clone https://github.com/Toasterbirb/dmenu
-git clone https://github.com/Toasterbirb/slock
+git clone https://github.com/Toasterbirb/dwm $sucklessPath/dwm
+git clone https://github.com/Toasterbirb/surf $sucklessPath/surf
+git clone https://github.com/Toasterbirb/dmenu $sucklessPath/dmenu
+git clone https://github.com/Toasterbirb/slock $sucklessPath/slock
 
 # Install them
 sh ~/Programs/suckless/dwm/install.sh
@@ -81,7 +81,7 @@ sh ~/Programs/suckless/slock/install.sh
 # Clone dotfiles
 echo "> Installing muh dotfiles"
 cd ~
-git clone https://github.com/Toasterbirb/dotfiles
+git clone https://github.com/Toasterbirb/dotfiles ~/dotfiles
 cd ~/dotfiles
 stow -t ~ *
 
