@@ -53,9 +53,16 @@ git clone https://github.com/Toasterbirb/dmenu $sucklessPath/dmenu
 git clone https://github.com/Toasterbirb/slock $sucklessPath/slock
 
 # Install them
+cd ~/Programs/suckless/dwm
 sh ~/Programs/suckless/dwm/install.sh
+
+cd ~/Programs/suckless/surf
 sh ~/Programs/suckless/surf/install.sh
+
+cd ~/Programs/suckless/dmenu
 sh ~/Programs/suckless/dmenu/install.sh
+
+cd ~/Programs/suckless/slock
 sh ~/Programs/suckless/slock/install.sh
 
 # Clone dotfiles
