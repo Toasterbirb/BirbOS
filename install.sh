@@ -83,3 +83,9 @@ echo "sh $sucklessPath/dwm/dwmbar/dwmbar.sh &" > ~/.xinitrc
 echo "feh --bg-fill $scriptPath/wallpaper.jpg" >> ~/.xinitrc
 echo "sxhkd &" >> ~/.xinitrc
 echo "exec dwm" >> ~/.xinitrc
+
+# Install vim plugin manager and vim plugins
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+nvim -c :PlugInstall
