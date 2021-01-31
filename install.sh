@@ -75,8 +75,9 @@ cd ~/dotfiles
 stow -t ~ *
 
 # Cleaning up .xinitrc so it doesn't contain my personal launch commands
-echo "exec dwm" > ~/.xinitrc
-echo "sh $sucklessPath/dwm/dwmbar/dwmbar.sh" >> ~/.xinitrc
+echo "exec dwm &" > ~/.xinitrc
+echo "sh $sucklessPath/dwm/dwmbar/dwmbar.sh &" >> ~/.xinitrc
+echo "nitrogen --restore &" >> ~/.xinitrc
 
 # Set wallpaper
 nitrogen --set-zoom-fill $scriptPath/wallpaper.jpg
