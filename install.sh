@@ -53,7 +53,7 @@ git clone https://github.com/Toasterbirb/dwm $sucklessPath/dwm
 git clone https://github.com/Toasterbirb/surf $sucklessPath/surf
 git clone https://github.com/Toasterbirb/dmenu $sucklessPath/dmenu
 git clone https://github.com/Toasterbirb/slock $sucklessPath/slock
-git clone https://github.com/Toasterbirb/slock $sucklessPath/tabbed
+git clone https://github.com/Toasterbirb/tabbed $sucklessPath/tabbed
 
 # Install them
 cd ~/Programs/suckless/dwm
